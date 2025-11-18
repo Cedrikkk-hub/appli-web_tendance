@@ -44,7 +44,8 @@ server <- function(input, output, session) {
         scale_x_date(date_breaks = "1 month", date_labels = "%b %Y") +
         labs(title = paste("Évolution de", ind),
              x = "Mois", y = ind) +
-        theme(axis.text.x = element_text(angle = 45, hjust = 1))
+        theme(axis.text.x = element_text(angle = 45, hjust = 1))+
+        theme_minimal()
     } else {
       # Agréger par mois + catégorie de comparaison
       df_plot <- df2 %>%
@@ -58,7 +59,8 @@ server <- function(input, output, session) {
         scale_x_date(date_breaks = "1 month", date_labels = "%b %Y") +
         labs(title = paste("Évolution de", ind, "par", comp),
              x = "Mois", y = ind, color = comp) +
-        theme(axis.text.x = element_text(angle = 45, hjust = 1))
+        theme(axis.text.x = element_text(angle = 45, hjust = 1))+
+        theme_minimal()
     }
   })
   

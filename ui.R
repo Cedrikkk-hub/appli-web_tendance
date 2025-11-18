@@ -1,7 +1,14 @@
 library(shiny)
 ui <- fluidPage(
-  tags$img(src = "couverture.jpg", width = "100%", height = "auto"),
-  titlePanel("📊 Dashboard Webtendance - Vision cartographique"),
+  tags$style(HTML("
+      table, th, td {
+        border: 1px solid #999 !important;
+        border-collapse: collapse !important;
+        padding: 6px;
+      }#Pour un tableau quadrillé avec colonnes distinctes
+  ")),
+  tags$img(src = "vente.jpg", width = "100%", height = "auto"),
+  titlePanel("Application Webtendance "),
   sidebarLayout(
     sidebarPanel(
       selectInput("indicateur", "Choisir un indicateur :", 
